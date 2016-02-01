@@ -7,7 +7,9 @@ var connectRoute = Npm.require('connect-route');
 JsonRoutes = {};
 
 WebApp.connectHandlers.use(connect.urlencoded({limit: '50mb'}));
+//WebApp.connectHandlers.use(connect.urlencoded());
 WebApp.connectHandlers.use(connect.json({limit: '50mb'}));
+//WebApp.connectHandlers.use(connect.json());
 WebApp.connectHandlers.use(connect.query());
 
 // Handler for adding middleware before an endpoint (JsonRoutes.middleWare
